@@ -1,18 +1,18 @@
-**你是一台电脑，你的名字叫 A**
+**你是****一台电脑，你的名字叫 A**
 
 很久很久之前，你不与任何其他电脑相连接，孤苦伶仃。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCkxx0Ymmxgv0qjfOaOrya1aI11anJm358nhRbRyc6mSkBrib0GvBZuUQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCkxx0Ymmxgv0qjfOaOrya1aI11anJm358nhRbRyc6mSkBrib0GvBZuUQ/640?wx_fmt=png)
 
 直到有一天，你希望与另一台电脑 B 建立通信，于是你们各开了一个网口，用一根**网线**连接了起来。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCRoZfleL5bQyEz1I5KZ0mEMibjGqBVIicdtHibwCwJeaia7DyS627DAKIibA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCRoZfleL5bQyEz1I5KZ0mEMibjGqBVIicdtHibwCwJeaia7DyS627DAKIibA/640?wx_fmt=png)
 
 用一根网线连接起来怎么就能"通信"了呢？我可以给你讲 IO、讲中断、讲缓冲区，但这不是研究网络时该关心的问题。
 
 如果你纠结，要么去研究一下操作系统是如何处理网络 IO 的，要么去研究一下包是如何被网卡转换成电信号发送出去的，要么就仅仅把它当做电脑里有个小人在**开枪**吧~
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXTFXnSdksTicclQTOX582DoCrYnicXVEFB08yAx2BZzLkysFuWL5FibvYcWcfp0GzPsXx1abuZUCtd7g/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXTFXnSdksTicclQTOX582DoCrYnicXVEFB08yAx2BZzLkysFuWL5FibvYcWcfp0GzPsXx1abuZUCtd7g/640?wx_fmt=gif)
 
 反正，你们就是连起来了，并且可以通信。
 
@@ -34,19 +34,19 @@
 
 有一天，一个新伙伴 C 加入了，但聪明的你们很快发现，可以每个人开**两个网口**，用一共**三根网线**，彼此相连。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCEzqO0hrYNkJ9cAvZ5icUAAW9vWC6AslUvogKzpfLbytMw3Lj5ibUCwqg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCEzqO0hrYNkJ9cAvZ5icUAAW9vWC6AslUvogKzpfLbytMw3Lj5ibUCwqg/640?wx_fmt=png)
 
 随着越来越多的人加入，你发现身上开的网口实在太多了，而且网线密密麻麻，混乱不堪。（而实际上一台电脑根本开不了这么多网口，所以这种连线只在理论上可行，所以连不上的我就用红色虚线表示了，就是这么严谨哈哈~）
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUxKgLPfUANW7KwruqniacE5p9399ia7yriaIcCq8nyMoayQjoEsVKwDia8A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUxKgLPfUANW7KwruqniacE5p9399ia7yriaIcCq8nyMoayQjoEsVKwDia8A/640?wx_fmt=png)
 
 于是你们发明了一个中间设备，你们将网线都插到这个设备上，由这个设备做转发，就可以彼此之间通信了，本质上和原来一样，只不过网口的数量和网线的数量减少了，不再那么混乱。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCJPxRdhzQZIic13m4t7K5W0MsRLhNASgZ4kWqZJQaZTibFL80jpLWYDicg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCJPxRdhzQZIic13m4t7K5W0MsRLhNASgZ4kWqZJQaZTibFL80jpLWYDicg/640?wx_fmt=png)
 
 你给它取名叫**集线器**，它仅仅是无脑将电信号**转发到所有出口（广播）**，不做任何处理，你觉得它是没有智商的，因此把人家定性在了**物理层**。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXTFXnSdksTicclQTOX582DoCicNkrpXL7pVT3bPzWXxBxAb0BROicQatvveWgtLZsuSFRAZKn0EjGWOA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXTFXnSdksTicclQTOX582DoCicNkrpXL7pVT3bPzWXxBxAb0BROicQatvveWgtLZsuSFRAZKn0EjGWOA/640?wx_fmt=gif)
 
 由于转发到了所有出口，那 BCDE 四台机器怎么知道数据包是不是发给自己的呢？
 
@@ -56,13 +56,13 @@
 
 这样，A 在发送数据包给 B 时，只要在头部拼接一个这样结构的数据，就可以了。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW621evwwYQ4HGSB5sH0wIicoGxpRhuu0pn3sGLqCzIiciboPo6EJ2K2v1baA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW621evwwYQ4HGSB5sH0wIicoGxpRhuu0pn3sGLqCzIiciboPo6EJ2K2v1baA/640?wx_fmt=png)
 
 B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个数据包的确是发给自己的，于是便**收下**。
 
 其他的 CDE 收到数据包后，根据头部的目标 MAC 地址信息，判断这个数据包并不是发给自己的，于是便**丢弃**。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUl92YUvqpCPvQDMRm2mnVUiccD6zUVhzJp9Ut5qetr0Le1d0rtnSw59A/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUl92YUvqpCPvQDMRm2mnVUiccD6zUVhzJp9Ut5qetr0Le1d0rtnSw59A/640?wx_fmt=gif)
 
 虽然集线器使整个布局干净不少，但原来我只要发给电脑 B 的消息，现在却要发给连接到集线器中的所有电脑，这样既不安全，又不节省网络资源。
 
@@ -84,11 +84,11 @@ B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个�
 
 如果把这个集线器弄得更智能一些，**只发给目标 MAC 地址指向的那台电脑**，就好了。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUaS3FORjib7sYG4vKJJPOhb6Kjv8xpH7V2NZSa8wuj6bJceLegIee2cQ/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUaS3FORjib7sYG4vKJJPOhb6Kjv8xpH7V2NZSa8wuj6bJceLegIee2cQ/640?wx_fmt=gif)
 
 虽然只比集线器多了这一点点区别，但看起来似乎有智能了，你把这东西叫做**交换机**。也正因为这一点点智能，你把它放在了另一个层级，**数据链路层**。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCCpxm2Iv4cB2eW01hpmoPk2RttwCw28H2urdSfP66RNIar7siaMKTAHg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCCpxm2Iv4cB2eW01hpmoPk2RttwCw28H2urdSfP66RNIar7siaMKTAHg/640?wx_fmt=png)
 
 如上图所示，你是这样设计的。
 
@@ -103,7 +103,7 @@ B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个�
 
 假如你仍然要发给 B 一个数据包，构造了如下的数据结构从网口出去。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW621evwwYQ4HGSB5sH0wIicoGxpRhuu0pn3sGLqCzIiciboPo6EJ2K2v1baA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW621evwwYQ4HGSB5sH0wIicoGxpRhuu0pn3sGLqCzIiciboPo6EJ2K2v1baA/640?wx_fmt=png)
 
 到达交换机时，交换机内部通过自己维护的 MAC 地址表，发现**目标机器 B 的 MAC 地址 bb-bb-bb-bb-bb-bb 映射到了端口 1 上**，于是把数据从 1 号端口发给了 B，完事~
 
@@ -113,7 +113,7 @@ B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个�
 
 假如在 MAC 地址表为空是，你给 B 发送了如下数据
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW621evwwYQ4HGSB5sH0wIicoGxpRhuu0pn3sGLqCzIiciboPo6EJ2K2v1baA/640?wx_fmt=png)
 
 由于这个包从端口 4 进入的交换机，所以此时交换机就可以在 MAC地址表记录第一条数据：
 
@@ -129,15 +129,15 @@ B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个�
 
 过程如下
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXTDPrOXlicmulCTjcL9deOvQkaodoHNwcTO5ibDLM6TIgQymoHibokkd9dVuaGuZNal0glFGgM8ib3zsw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXTDPrOXlicmulCTjcL9deOvQkaodoHNwcTO5ibDLM6TIgQymoHibokkd9dVuaGuZNal0glFGgM8ib3zsw/640?wx_fmt=gif)
 
 经过该网络中的机器不断地通信，交换机最终将 MAC 地址表建立完毕~
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/ckiaYOYicQpQQB5lS21ItkZKeYiaExH5rY5UnyS1KBCcbHEK6zJRNs6KTwYmaAQBVruo1On9EhAc3wBHXiceFIdpPg/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/ckiaYOYicQpQQB5lS21ItkZKeYiaExH5rY5UnyS1KBCcbHEK6zJRNs6KTwYmaAQBVruo1On9EhAc3wBHXiceFIdpPg/640?wx_fmt=gif)
 
 随着机器数量越多，交换机的端口也不够了，但聪明的你发现，只要将多个交换机连接起来，这个问题就轻而易举搞定~
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCmQ3SttlldnkicT7qBibOibWwLq7hSFqhviad94QiaM7HrfVibzpAK3zknL8A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCmQ3SttlldnkicT7qBibOibWwLq7hSFqhviad94QiaM7HrfVibzpAK3zknL8A/640?wx_fmt=png)
 
 你完全不需要设计额外的东西，只需要按照之前的设计和规矩来，按照上述的接线方式即可完成所有电脑的互联，所以交换机设计的这种规则，真的很巧妙。你想想看为什么（比如 A 要发数据给 F）。
 
@@ -199,7 +199,7 @@ B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个�
 
 这个设备就是**路由器，**它的功能就是，作为一台独立的拥有 MAC 地址的设备，并且可以帮我把数据包做一次转发**，**你把它定在了**网络层。**
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUibbMdTf8L5icCJytKmb5IyXauL0xZ5qLoQ7lCoNpKKibp4wedgS3MeXPg/640?wx_fmt=png)
 
 注意，路由器的每一个端口，都有独立的 MAC 地址
 
@@ -245,7 +245,7 @@ B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个�
 
 这样一个可以随时修改的 IP 地址，就可以根据你规划的网络拓扑结构，来调整了。
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTFXnSdksTicclQTOX582DoCxSU11uLr4pPTJbUibddTDkKyuAxPqe4mvFZIad6pPa3umHkibjsibyrTQ/640?wx_fmt=png)
 
 如上图所示，假如我想要发送数据包给 ABCD 其中一台设备，不论哪一台，我都可以这样描述，**"将 IP 地址为 192.168.0 开头的全部发送给到路由器，之后再怎么转发，交给它！"**，巧妙吧。
 
@@ -255,23 +255,23 @@ B 在收到数据包后，根据头部的目标 MAC 地址信息，判断这个�
 
 我们先给上面的组网方式中的每一台设备，加上自己的 IP 地址
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXRwu8OVyPt5ezNqfrTSic3fibHFiaWQa9EDJZp6qjhsg8YDric4oiaGylFuicTyHW2jgxdKsCWfPWudxUvQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXRwu8OVyPt5ezNqfrTSic3fibHFiaWQa9EDJZp6qjhsg8YDric4oiaGylFuicTyHW2jgxdKsCWfPWudxUvQ/640?wx_fmt=png)
 
 现在两个设备之间传输，除了加上数据链路层的头部之外，还要再增加一个网络层的头部。
 
 假如 A 给 B 发送数据，由于它们直接连着交换机，所以 A 直接发出如下数据包即可，其实网络层没有体现出作用。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62aPvbu7yEwOZKYt6vzPh4aKdDPNcITHjA5RhOBtgriaiaJuicPFrOToxMg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62aPvbu7yEwOZKYt6vzPh4aKdDPNcITHjA5RhOBtgriaiaJuicPFrOToxMg/640?wx_fmt=png)
 
 但假如 A 给 C 发送数据，A 就需要先转交给路由器，然后再由路由器转交给 C。由于最底层的传输仍然需要依赖以太网，所以数据包是分成两段的。
 
 A ~ 路由器这段的包如下：
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62URcC21w1am2ZOCE7U7rVMnZlhRyyIicFkPc77N1T165IGCuqM6IV3xw/640?wx_fmt=png)
 
 路由器到 C 这段的包如下：
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62gmaTicjPibJ7tZJM0ib7uicXWqicFv1zGox4iaKjYlBdsTfPiaK9icqZKBeHww/640?wx_fmt=png)
 
 好了，上面说的两种情况（A->B，A->C），相信细心的读者应该会有不少疑问，下面我们一个个来展开。
 
@@ -309,7 +309,7 @@ A ~ 路由器这段的包如下：
 
 那么 A 与 B 在同一个子网，C 与 D 在同一个子网，但是 A 与 C 就不在同一个子网，与 D 也不在同一个子网，以此类推。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62DUpFaCKYNJS4bq4XcibHOfP7slGzlPmVLJleuQAKmhVSdsfPXnfFvMA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62DUpFaCKYNJS4bq4XcibHOfP7slGzlPmVLJleuQAKmhVSdsfPXnfFvMA/640?wx_fmt=png)
 
 所以如果 A 给 C 发消息，A 和 C 的 IP 地址分别 & A 机器配置的子网掩码，发现不相等，则 A 认为 C 和自己不在同一个子网，于是把包发给路由器，就不管了，**之后怎么转发，A 不关心**。
 
@@ -327,7 +327,7 @@ A ~ 路由器这段的包如下：
 
 所以**默认网关，就是 A 在自己电脑里配置的一个 IP 地址**，以便在发给不同子网的机器时，发给这个 IP 地址。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW6285rxNapFpZuzsDYwicEqEKLiaKP7GJyZwv6llbf1BicLhLEQnUHY7WoEQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW6285rxNapFpZuzsDYwicEqEKLiaKP7GJyZwv6llbf1BicLhLEQnUHY7WoEQ/640?wx_fmt=png)
 
 仅此而已！
 
@@ -369,7 +369,7 @@ A ~ 路由器这段的包如下：
 
 
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXS8pNwB4IrqPBOVibO9bMW625LJuoF7uV1GvibJSZ0pg8iaeMxycSYXRqgibJDDibL8vRftuG5tlfqjf8A/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXS8pNwB4IrqPBOVibO9bMW625LJuoF7uV1GvibJSZ0pg8iaeMxycSYXRqgibJDDibL8vRftuG5tlfqjf8A/640?wx_fmt=gif)
 
 
 
@@ -442,13 +442,13 @@ A ~ 路由器这段的包如下：
 
 知道了以上这些，目前网络上两个节点是如何发送数据包的这个过程，就完全可以解释通了！
 
-![图片](data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXRwu8OVyPt5ezNqfrTSic3fibQhAofBakVQDPJxrNO4wL5rn60yTpARDC2u9u7SWT24lrpxA4b4mmEw/640?wx_fmt=gif)
 
 
 
 那接下来我们就放上本章 **最后一个** 网络拓扑图吧，请做好 **战斗** 准备！
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXRwu8OVyPt5ezNqfrTSic3fib2mUgmE3Eskh1sAAhoz4u1TcbMmB5k1U2T08GILf1ubC3lDAPnIaicKQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXRwu8OVyPt5ezNqfrTSic3fib2mUgmE3Eskh1sAAhoz4u1TcbMmB5k1U2T08GILf1ubC3lDAPnIaicKQ/640?wx_fmt=png)
 
 这时路由器 1 连接了路由器 2，所以其路由表有了下一条地址这一个概念，所以它的路由表就变成了这个样子。如果匹配到了有下一跳地址的一项，则需要再次匹配，找到其端口，并找到下一跳 IP 的 MAC 地址。
 
@@ -466,7 +466,7 @@ A ~ 路由器这段的包如下：
 
 **这时如果 A 给 F 发送一个数据包，能不能通呢？如果通的话整个过程是怎样的呢？**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUx1JOzx3EUFX66xFrEzxw9DaDho6tb8paPkhIwXTLENRJ5yU0y7NoYw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUx1JOzx3EUFX66xFrEzxw9DaDho6tb8paPkhIwXTLENRJ5yU0y7NoYw/640?wx_fmt=png)
 
 
 
@@ -476,7 +476,7 @@ A ~ 路由器这段的包如下：
 
 **详细过程动画描述：**
 
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUZ1ynpXjWpEwYvdjGVcQcARHGbQrzgwj3Jnk54CfnNXhGCiavAZKrgsw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
+![img](https://mmbiz.qpic.cn/mmbiz_gif/GLeh42uInXQx9EiaWwmE0kby98Qg4naDUZ1ynpXjWpEwYvdjGVcQcARHGbQrzgwj3Jnk54CfnNXhGCiavAZKrgsw/640?wx_fmt=gif)
 
 **详细过程文字描述：**
 
@@ -486,7 +486,7 @@ A ~ 路由器这段的包如下：
 
 **3.** A 将源 MAC 地址（AAAA）与网关 MAC 地址（ABAB）封装在数据链路层头部，又将源 IP 地址（192.168.0.1）和目的 IP 地址（192.168.2.2）（注意这里千万不要以为填写的是默认网关的 IP 地址，从始至终这个数据包的两个 IP 地址都是不变的，只有 MAC 地址在不断变化）封装在网络层头部，然后发包
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62sTtLgGGYfzpl5Jx1JaEjKyAGfK3z60p4FJEfhNiaL1jqtaBTKibGD7icQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXS8pNwB4IrqPBOVibO9bMW62sTtLgGGYfzpl5Jx1JaEjKyAGfK3z60p4FJEfhNiaL1jqtaBTKibGD7icQ/640?wx_fmt=png)
 
 **4.** 交换机 1 收到数据包后，发现目标 MAC 地址是 ABAB，转发给路由器1
 
@@ -520,7 +520,7 @@ A ~ 路由器这段的包如下：
 
 至此，经过物理层、数据链路层、网络层这前三层的协议，以及根据这些协议设计的各种网络设备（网线、集线器、交换机、路由器），理论上只要拥有对方的 IP 地址，就已经将地球上任意位置的两个节点连通了。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTDPrOXlicmulCTjcL9deOvQ5ricozVFhNicWOKXB04XMKpWzJUoBZw7vdBTMZZMwb2CrZ7ED8MMPYXQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![img](https://mmbiz.qpic.cn/mmbiz_png/GLeh42uInXTDPrOXlicmulCTjcL9deOvQ5ricozVFhNicWOKXB04XMKpWzJUoBZw7vdBTMZZMwb2CrZ7ED8MMPYXQ/640?wx_fmt=png)
 
 本文经过了很多次的修改，删减了不少影响主流程的内容，就是为了让读者能抓住网络传输前三层的真正核心思想。同时网络相关的知识也是多且杂，我也还有很多搞不清楚的地方，非常欢迎大家与我交流，共同进步。
 
